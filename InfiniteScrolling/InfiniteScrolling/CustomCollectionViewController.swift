@@ -10,6 +10,7 @@ import UIKit
 
 class CustomCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
    
+   var i = 50
    var collectionView: UICollectionView!
    var allCells = [CustomCell]()
    var wasTapped = false
@@ -60,10 +61,12 @@ class CustomCollectionViewController: UIViewController, UICollectionViewDelegate
 //         collectionView.addSubview(newCell)
 //         allCells.append(newCell)
 //      }
-      var newCell = CustomCell(frame: CGRect(x: 300, y: 200, width: 200, height: 200))
+      let newCell = CustomCell(frame: CGRect(x: 300 - i, y: 200, width: 200, height: 200))
       newCell.backgroundColor = .random()
       collectionView.addSubview(newCell)
       allCells.append(newCell)
+      collectionView.reloadInputViews()
+      i += 30
    }
 }
 
