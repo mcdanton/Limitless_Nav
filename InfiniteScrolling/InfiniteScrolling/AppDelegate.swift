@@ -19,28 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       
-   
-      let secondAnalyticsConfig = SEGAnalyticsConfiguration(writeKey: "9QE1ES9qKKqBS3DZfCJ2DqEyqSmRBQr5")
       
-      print("Second analytics config: \(secondAnalyticsConfig.debugDescription)")
-
-      secondAnalyticsConfig!.trackApplicationLifecycleEvents = true
-
-
-//      let writeKey = SEGAnalyticsConfiguration().writeKey
-//      let config = SEGAnalyticsConfiguration.init(writeKey: "write key")
+      let analyticsConfig = SEGAnalyticsConfiguration(writeKey: "9QE1ES9qKKqBS3DZfCJ2DqEyqSmRBQr5")
       
-      
-      let sharedAnalytics = SEGAnalytics.init(configuration: secondAnalyticsConfig)
-         //SEGAnalytics(configuration: secondAnalyticsConfig!)
-      
-     //   let analyticsWithConfig = sharedAnalytics.setup(with: secondAnalyticsConfig)
-      
-      print("Third SHARED analytics config: \(sharedAnalytics.debugDescription)")
-      
+      print("Analytics config: \(analyticsConfig.debugDescription)")
 
       
-            print(sharedAnalytics.debugDescription)
+      analyticsConfig!.trackApplicationLifecycleEvents = true
+      analyticsConfig!.recordScreenViews = true
+      
+      SEGAnalytics.setup(with: analyticsConfig)
+      
+    //  let analytics = SEGAnalytics(configuration: analyticsConfig)
+      
+      SEGAnalytics.shared().track(("swift sucks"))
+      
+      
+//      print("Third SHARED analytics config: \(sharedAnalytics.debugDescription)")
+//      print(sharedAnalytics.debugDescription)
       
       return true
    }
