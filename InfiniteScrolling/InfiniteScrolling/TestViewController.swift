@@ -10,9 +10,10 @@ import UIKit
 
 class TestViewController: UIViewController {
    
-   var allViews = [UIView]()
-   var scrollView = UIScrollView()
+   var scrollView: UIScrollView!
+   var contentView: UIView!
    var rootView = UIView()
+   var allViews = [UIView]()
    var wasTapped = false
    
    
@@ -26,6 +27,8 @@ class TestViewController: UIViewController {
       scrollView = UIScrollView(frame: self.view.bounds)
       self.view.addSubview(scrollView)
       scrollView.backgroundColor = UIColor.green
+      
+      scrollView.showsHorizontalScrollIndicator = true
       
       rootView = UIView(frame: CGRect(x: 25, y: 200, width: 325, height: 325))
       self.view.addSubview(rootView)
@@ -59,20 +62,6 @@ class TestViewController: UIViewController {
 }
 
 
-extension CGFloat {
-   static func random() -> CGFloat {
-      return CGFloat(arc4random()) / CGFloat(UInt32.max)
-   }
-}
 
-
-extension UIColor {
-   static func random() -> UIColor {
-      return UIColor(red:   .random(),
-                     green: .random(),
-                     blue:  .random(),
-                     alpha: 1.0)
-   }
-}
 
 
