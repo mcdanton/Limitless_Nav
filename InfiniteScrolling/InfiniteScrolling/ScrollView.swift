@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScrollView: UIViewController {
+class ScrollView: UIViewController, UIGestureRecognizerDelegate {
    
    // MARK: Outlets
    @IBOutlet var superView: UIView!
@@ -18,51 +18,43 @@ class ScrollView: UIViewController {
    
    // MARK: Properties
    var currentView: UIView!
-   var wasPressed = false
-   var viewSize = CGRect()
-   var newView: UIView?
+   var newView: UIView!
    var activeView: UIView!
    
-   
-   
-   override func viewDidLayoutSubviews() {
-      super.viewDidLayoutSubviews()
-      
-   
-   }
    
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      
-      currentView = UIView(frame: CGRect(origin: contentView.frame.origin, size: contentView.frame.size))
+      currentView = UIView(frame: CGRect(x: 0, y: 0, width: contentView.frame.width, height: contentView.frame.height))
+      currentView.translatesAutoresizingMaskIntoConstraints = false
       currentView.backgroundColor = UIColor.red
       contentView.addSubview(currentView)
       
-      let imageView = UIImageView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
-      imageView.image = UIImage(named: "github-logo-in-a-rounded-square_318-40761")
-      currentView.addSubview(imageView)
+      newView = UIView(frame: CGRect(x: currentView.frame.origin.x + currentView.frame.width, y: currentView.frame.origin.y, width: currentView.frame.width, height: currentView.frame.height))
+      newView.backgroundColor = UIColor.green
+      contentView.addSubview(newView)
       
-      let widthConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: contentView.frame.width)
-      let heightConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: contentView.frame.height)
-      let horizontalConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
-      let verticalConstraint = NSLayoutConstraint(item: imageView, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
-      
-      view.addConstraints([widthConstraint, horizontalConstraint, verticalConstraint, heightConstraint])
+      scrollView.contentSize = CGSize(width: contentView.frame.width * totalNumberOfPages(), height: view.frame.height)
       
 
+   
 
       let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
+      longPress.minimumPressDuration = 0.01
+      longPress.delegate = self
       self.view.addGestureRecognizer(longPress)
       
-      let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(switchScreens))
-      self.view.addGestureRecognizer(swipeRight)
+      let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(switchScreens))
+      swipeLeft.direction = .left
+      swipeLeft.delegate = self
+      //self.view.addGestureRecognizer(swipeLeft)
    }
    
    
    func handleLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
-      if gestureRecognizer.state == .began {
+      if gestureRecognizer.state == .began  {
       print("press confirmed")
+         
       
       
 //         UIView.animate(withDuration: 1.0, animations: {
@@ -71,20 +63,16 @@ class ScrollView: UIViewController {
 //            self.activeView.frame.origin.x += 75
 //            self.activeView.frame.origin.y += 200
 //            self.viewSize = self.activeView.frame
-//            self.wasPressed = true
 //         }, completion: nil)
       
-      
-      self.currentView.frame.size.width = 150
-      self.currentView.frame.size.height = 150
-      self.currentView.frame.origin.x = 150
-      self.currentView.frame.origin.y = 150
-
-         newView = UIView(frame: CGRect(x: 300, y: 200, width: 200, height: 200))
-         newView?.backgroundColor = UIColor.green
-         contentView.addSubview(newView!)
+         contentView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+         addPage()
+         
       } else if gestureRecognizer.state == .ended {
-         print("Press Ended")
+         print("press ended")
+         
+//         newView?.removeFromSuperview()
+     contentView.transform = CGAffineTransform(scaleX: 1, y: 1)
       }
    }
    
@@ -94,15 +82,54 @@ class ScrollView: UIViewController {
       
       UIView.animate(withDuration: 1.0, animations: {
          self.newView?.frame = self.view.frame
+         self.newView?.backgroundColor =  UIColor.cyan
          self.activeView = self.newView
-         self.wasPressed = false
       }, completion: nil)
       
    }
    
    
+   func contentViewInferredSize(numbOfPages: Int) -> CGSize {
+      
+      let adjustedSize = CGSize(width: view.frame.width * CGFloat(numbOfPages), height: view.frame.height)
+      return adjustedSize
+   }
    
+   func totalNumberOfPages() -> CGFloat {
+      var numberOfPages = 0
+      for _ in contentView.subviews {
+         numberOfPages += 1
+      }
+      return CGFloat(numberOfPages)
+   }
    
+   func addPage() {
+      
+      let newPage = UIView(frame: CGRect(x: view.frame.width * totalNumberOfPages(), y: 0, width: view.frame.width, height: view.frame.height))
+      newPage.backgroundColor = UIColor.random()
+      contentView.addSubview(newPage)
+      scrollView.contentSize = CGSize(width: contentView.frame.width * totalNumberOfPages(), height: view.frame.height)
+   }
+   
+   func removePage() {
+      
+      if contentView.subviews.count > 1 {
+         
+         let firstSubview = contentView.subviews[0]
+         firstSubview.removeFromSuperview()
+      } else {
+         let alertController = UIAlertController(title: "Can't Delete", message: "Cannot Delete Subview", preferredStyle: .alert)
+         let alertAction = UIAlertAction(title: "Can't Delete", style: .cancel, handler: nil)
+         alertController.addAction(alertAction)
+      }
+      
+      
+   }
+
+   
+   func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+      return true
+   }
    
 }
 
@@ -139,4 +166,9 @@ extension UIView {
       return nil
    }
 }
+
+
+
+
+
 
