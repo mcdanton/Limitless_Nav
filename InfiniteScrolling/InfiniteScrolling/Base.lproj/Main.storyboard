@@ -142,6 +142,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="l2y-uH-auf">
+                                <rect key="frame" x="160" y="550" width="55" height="37"/>
+                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qR0-VN-IXs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -157,13 +160,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qR0-VN-IXs" secondAttribute="trailing" id="H7J-fK-O0V"/>
+                            <constraint firstAttribute="trailing" secondItem="l2y-uH-auf" secondAttribute="trailing" constant="160" id="aMF-GN-Qnj"/>
+                            <constraint firstItem="VXY-0F-Mkp" firstAttribute="top" secondItem="l2y-uH-auf" secondAttribute="bottom" constant="80" id="aeW-Py-Txb"/>
                             <constraint firstItem="VXY-0F-Mkp" firstAttribute="top" secondItem="qR0-VN-IXs" secondAttribute="bottom" id="cxF-zV-YAx"/>
                             <constraint firstItem="qR0-VN-IXs" firstAttribute="leading" secondItem="Uvo-CP-ibc" secondAttribute="leading" id="fIL-aQ-ZN3"/>
+                            <constraint firstItem="l2y-uH-auf" firstAttribute="leading" secondItem="Uvo-CP-ibc" secondAttribute="leading" constant="160" id="kfi-ke-VwN"/>
                             <constraint firstItem="qR0-VN-IXs" firstAttribute="top" secondItem="Uvo-CP-ibc" secondAttribute="top" id="oeO-aP-Na8"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="bZF-kW-iMc" id="r7a-1L-TKO"/>
+                        <outlet property="pageControl" destination="l2y-uH-auf" id="6tZ-pg-ssr"/>
                         <outlet property="scrollView" destination="qR0-VN-IXs" id="omj-oZ-DlI"/>
                         <outlet property="superView" destination="Uvo-CP-ibc" id="YQc-ma-M7B"/>
                     </connections>
