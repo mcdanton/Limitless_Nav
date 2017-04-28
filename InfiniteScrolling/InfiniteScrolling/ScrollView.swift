@@ -44,16 +44,6 @@ class ScrollView: UIViewController, UIGestureRecognizerDelegate, UIScrollViewDel
    func handleLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
       if gestureRecognizer.state == .began  {
       print("press confirmed")
-         
-      
-      
-//         UIView.animate(withDuration: 1.0, animations: {
-//            self.activeView.frame.size.width *= 0.5
-//            self.activeView.frame.size.height *= 0.25
-//            self.activeView.frame.origin.x += 75
-//            self.activeView.frame.origin.y += 200
-//            self.viewSize = self.activeView.frame
-//         }, completion: nil)
       
          contentView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
          addPage()
