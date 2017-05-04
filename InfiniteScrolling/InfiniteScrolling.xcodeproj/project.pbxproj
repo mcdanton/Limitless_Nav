@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2F026387A6D4FB826FD28948 /* Pods_InfiniteScrolling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EEC3AC68EED8880B07353F /* Pods_InfiniteScrolling.framework */; };
 		3723D2C41E9FCE9C00FDD397 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3723D2C31E9FCE9C00FDD397 /* Data.swift */; };
+		374A92691EBA73C0003CCA80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A92681EBA73C0003CCA80 /* LoginViewController.swift */; };
+		374A926B1EBB81DF003CCA80 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926A1EBB81DF003CCA80 /* REST.swift */; };
+		374A926D1EBBBC42003CCA80 /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */; };
 		3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9841E96A89000445CDC /* AppDelegate.swift */; };
 		3770F9871E96A89000445CDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9861E96A89000445CDC /* ViewController.swift */; };
 		3770F98A1E96A89000445CDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3770F9881E96A89000445CDC /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 		18C25174DD87772D9EB14F9C /* Pods-InfiniteScrolling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrolling.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteScrolling/Pods-InfiniteScrolling.release.xcconfig"; sourceTree = "<group>"; };
 		3723D2C31E9FCE9C00FDD397 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3723D2C61EA0075B00FDD397 /* InfiniteScrolling-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfiniteScrolling-Bridging-Header.h"; sourceTree = "<group>"; };
+		374A92681EBA73C0003CCA80 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		374A926A1EBB81DF003CCA80 /* REST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
+		374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		3770F9811E96A89000445CDC /* InfiniteScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3770F9841E96A89000445CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3770F9861E96A89000445CDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				3770F9901E96A89000445CDC /* Info.plist */,
 				3770F9961E96A8FD00445CDC /* Model.swift */,
 				3723D2C31E9FCE9C00FDD397 /* Data.swift */,
+				374A92681EBA73C0003CCA80 /* LoginViewController.swift */,
+				374A926A1EBB81DF003CCA80 /* REST.swift */,
+				374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */,
 			);
 			path = InfiniteScrolling;
 			sourceTree = "<group>";
@@ -229,6 +238,9 @@
 				3790B33E1EAA5A9500F94A5F /* ScrollView.swift in Sources */,
 				3790B3361EA7B2E100F94A5F /* TestViewController.swift in Sources */,
 				3770F9971E96A8FD00445CDC /* Model.swift in Sources */,
+				374A926D1EBBBC42003CCA80 /* UserPageViewController.swift in Sources */,
+				374A926B1EBB81DF003CCA80 /* REST.swift in Sources */,
+				374A92691EBA73C0003CCA80 /* LoginViewController.swift in Sources */,
 				3770F9871E96A89000445CDC /* ViewController.swift in Sources */,
 				3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */,
 				3723D2C41E9FCE9C00FDD397 /* Data.swift in Sources */,
