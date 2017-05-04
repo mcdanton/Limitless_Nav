@@ -13,6 +13,15 @@ class UserPageViewController: UIViewController {
    
    @IBAction func authPressed(_ sender: Any) {
       
+      let accessToken = UserDefaults.standard.object(forKey: "accessToken") as? String ?? "No Token Returned"
+      
+      authUser(path: RESTPath.auth.rawValue, token: accessToken, closure: { [weak self] success in
+         guard let unwrappedSelf = self else {return}
+         
+         print("user is authorized")
+         
+      })
+      
       
    }
    
