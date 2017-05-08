@@ -21,7 +21,6 @@ enum RESTPath: String {
    
    case login = "login"
    case auth = "auth"
-   
 }
 
 

@@ -14,12 +14,10 @@
 		374A926D1EBBBC42003CCA80 /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */; };
 		374A926F1EBBBE52003CCA80 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926E1EBBBE52003CCA80 /* UserDefaults.swift */; };
 		3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9841E96A89000445CDC /* AppDelegate.swift */; };
-		3770F9871E96A89000445CDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9861E96A89000445CDC /* ViewController.swift */; };
 		3770F98A1E96A89000445CDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3770F9881E96A89000445CDC /* Main.storyboard */; };
 		3770F98C1E96A89000445CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3770F98B1E96A89000445CDC /* Assets.xcassets */; };
 		3770F98F1E96A89000445CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3770F98D1E96A89000445CDC /* LaunchScreen.storyboard */; };
 		3770F9971E96A8FD00445CDC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9961E96A8FD00445CDC /* Model.swift */; };
-		3790B3361EA7B2E100F94A5F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790B3351EA7B2E100F94A5F /* TestViewController.swift */; };
 		3790B33E1EAA5A9500F94A5F /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790B33D1EAA5A9500F94A5F /* ScrollView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,13 +32,11 @@
 		374A926E1EBBBE52003CCA80 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		3770F9811E96A89000445CDC /* InfiniteScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3770F9841E96A89000445CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3770F9861E96A89000445CDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3770F9891E96A89000445CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3770F98B1E96A89000445CDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3770F98E1E96A89000445CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3770F9901E96A89000445CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3770F9961E96A8FD00445CDC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		3790B3351EA7B2E100F94A5F /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		3790B33D1EAA5A9500F94A5F /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		50042EF1AF8B291B74C89E91 /* Pods-InfiniteScrolling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrolling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteScrolling/Pods-InfiniteScrolling.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				3770F9841E96A89000445CDC /* AppDelegate.swift */,
-				3770F9861E96A89000445CDC /* ViewController.swift */,
-				3790B3351EA7B2E100F94A5F /* TestViewController.swift */,
 				3790B33D1EAA5A9500F94A5F /* ScrollView.swift */,
 				3770F9881E96A89000445CDC /* Main.storyboard */,
 				3723D2C61EA0075B00FDD397 /* InfiniteScrolling-Bridging-Header.h */,
@@ -239,13 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3790B33E1EAA5A9500F94A5F /* ScrollView.swift in Sources */,
-				3790B3361EA7B2E100F94A5F /* TestViewController.swift in Sources */,
 				3770F9971E96A8FD00445CDC /* Model.swift in Sources */,
 				374A926D1EBBBC42003CCA80 /* UserPageViewController.swift in Sources */,
 				374A926B1EBB81DF003CCA80 /* REST.swift in Sources */,
 				374A92691EBA73C0003CCA80 /* LoginViewController.swift in Sources */,
 				374A926F1EBBBE52003CCA80 /* UserDefaults.swift in Sources */,
-				3770F9871E96A89000445CDC /* ViewController.swift in Sources */,
 				3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */,
 				3723D2C41E9FCE9C00FDD397 /* Data.swift in Sources */,
 			);
