@@ -10,7 +10,7 @@ import UIKit
 
 class UserPageViewController: UIViewController {
 
-   
+
    @IBAction func authPressed(_ sender: Any) {
       
       let accessToken = UserDefaults.standard.object(forKey: "accessToken") as? String ?? "No Token Returned"
@@ -19,18 +19,12 @@ class UserPageViewController: UIViewController {
          guard let unwrappedSelf = self else {return}
          
          print("user is authorized")
-         
       })
-      
-      
    }
    
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-   
    }
 
 

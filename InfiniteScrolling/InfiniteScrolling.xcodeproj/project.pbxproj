@@ -61,6 +61,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		374A92701EC214EE003CCA80 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				374A92681EBA73C0003CCA80 /* LoginViewController.swift */,
+				3790B33D1EAA5A9500F94A5F /* ScrollView.swift */,
+				374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		374A92711EC2150B003CCA80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				374A926A1EBB81DF003CCA80 /* REST.swift */,
+				3723D2C31E9FCE9C00FDD397 /* Data.swift */,
+				3770F9961E96A8FD00445CDC /* Model.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		3770F9781E96A89000445CDC = {
 			isa = PBXGroup;
 			children = (
@@ -82,19 +102,15 @@
 		3770F9831E96A89000445CDC /* InfiniteScrolling */ = {
 			isa = PBXGroup;
 			children = (
+				374A92711EC2150B003CCA80 /* Models */,
+				374A92701EC214EE003CCA80 /* View Controllers */,
+				374A926E1EBBBE52003CCA80 /* UserDefaults.swift */,
 				3770F9841E96A89000445CDC /* AppDelegate.swift */,
-				3790B33D1EAA5A9500F94A5F /* ScrollView.swift */,
 				3770F9881E96A89000445CDC /* Main.storyboard */,
 				3723D2C61EA0075B00FDD397 /* InfiniteScrolling-Bridging-Header.h */,
 				3770F98B1E96A89000445CDC /* Assets.xcassets */,
 				3770F98D1E96A89000445CDC /* LaunchScreen.storyboard */,
 				3770F9901E96A89000445CDC /* Info.plist */,
-				3770F9961E96A8FD00445CDC /* Model.swift */,
-				3723D2C31E9FCE9C00FDD397 /* Data.swift */,
-				374A92681EBA73C0003CCA80 /* LoginViewController.swift */,
-				374A926A1EBB81DF003CCA80 /* REST.swift */,
-				374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */,
-				374A926E1EBBBE52003CCA80 /* UserDefaults.swift */,
 			);
 			path = InfiniteScrolling;
 			sourceTree = "<group>";
