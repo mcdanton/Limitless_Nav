@@ -10,45 +10,51 @@ import Foundation
 import Analytics
 
 
-class Node<T> {
+class Node {
    
-   var value: T
-   var children: [Node] = []
+   var uID: Int
+   var leftChild: Node?
+   var rightChild: Node?
    weak var parent: Node?
    
-   init(value: T) {
-      self.value = value
+   init(uID: Int) {
+      self.uID = uID
+   }
+   
+   
+   func addChildren(children: [Node]) {
       
-//      let sharedAnalytics = SEGAnalytics()
-//      
-//      sharedAnalytics.track("This is tracking")
-//      
-//      print(sharedAnalytics.debugDescription)
-
+      for node in children {
+         if let parent = node.parent {
+            if node.uID < parent.uID {
+               parent.leftChild = node
+            } else {
+               parent.rightChild = node
+            }
+         }
+      }
    }
    
-   
-   func addChild(child: Node) {
-      children.append(child)
-      child.parent = self
-   }
 }
 
 
+
+
+/*
 extension Node: CustomStringConvertible {
    
    var description: String {
-      var text = "\(value)"
+      var text = "\(uID)"
       
       if !children.isEmpty {
          text += " {" + children.map { $0.description }.joined(separator: ", ") + "} "
          
-//            text += " {"
-//            for child in children {
-//               text += child.description + ", "
-//            }
-//            text += "} "
-//         }
+         //            text += " {"
+         //            for child in children {
+         //               text += child.description + ", "
+         //            }
+         //            text += "} "
+         //         }
       }
       return text
    }
@@ -72,7 +78,7 @@ extension Node where T: Equatable {
       return nil
    }
 }
-
+*/
 
 
 
