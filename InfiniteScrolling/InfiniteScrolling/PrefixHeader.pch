@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  ToImportUnity
+//
+//  Created by Dan Hefter on 4/28/17.
+//  Copyright © 2017 DH. All rights reserved.
+//
+
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "UnityAppController.h"
+#endif
+
+#include "Preprocessor.h"
+#include "UnityTrampolineConfigure.h"
+#include "UnityInterface.h"
+
+#ifndef __OBJC__
+#if USE_IL2CPP_PCH
+#include "il2cpp_precompiled_header.h"
+#endif
+#endif
+
+#ifndef TARGET_IPHONE_SIMULATOR
+#define TARGET_IPHONE_SIMULATOR 0
+#endif
+
+#define printf_console printf
+
+#endif /* PrefixHeader_pch */
