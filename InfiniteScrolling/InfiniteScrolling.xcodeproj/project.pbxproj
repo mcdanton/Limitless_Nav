@@ -13,6 +13,7 @@
 		374A926B1EBB81DF003CCA80 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926A1EBB81DF003CCA80 /* REST.swift */; };
 		374A926D1EBBBC42003CCA80 /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */; };
 		374A926F1EBBBE52003CCA80 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926E1EBBBE52003CCA80 /* UserDefaults.swift */; };
+		374AA4891ECB676C003CCA80 /* BinaryTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374AA4881ECB676C003CCA80 /* BinaryTreeViewController.swift */; };
 		3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9841E96A89000445CDC /* AppDelegate.swift */; };
 		3770F98A1E96A89000445CDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3770F9881E96A89000445CDC /* Main.storyboard */; };
 		3770F98C1E96A89000445CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3770F98B1E96A89000445CDC /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		374A926A1EBB81DF003CCA80 /* REST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		374A926E1EBBBE52003CCA80 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		374AA4881ECB676C003CCA80 /* BinaryTreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTreeViewController.swift; sourceTree = "<group>"; };
 		3770F9811E96A89000445CDC /* InfiniteScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3770F9841E96A89000445CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3770F9891E96A89000445CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				374A926A1EBB81DF003CCA80 /* REST.swift */,
 				374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */,
 				374A926E1EBBBE52003CCA80 /* UserDefaults.swift */,
+				374AA4881ECB676C003CCA80 /* BinaryTreeViewController.swift */,
 			);
 			path = InfiniteScrolling;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				374A926B1EBB81DF003CCA80 /* REST.swift in Sources */,
 				374A92691EBA73C0003CCA80 /* LoginViewController.swift in Sources */,
 				374A926F1EBBBE52003CCA80 /* UserDefaults.swift in Sources */,
+				374AA4891ECB676C003CCA80 /* BinaryTreeViewController.swift in Sources */,
 				3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */,
 				3723D2C41E9FCE9C00FDD397 /* Data.swift in Sources */,
 			);
