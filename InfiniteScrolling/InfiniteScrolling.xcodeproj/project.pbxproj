@@ -14,6 +14,7 @@
 		374A926D1EBBBC42003CCA80 /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */; };
 		374A926F1EBBBE52003CCA80 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926E1EBBBE52003CCA80 /* UserDefaults.swift */; };
 		374AA4891ECB676C003CCA80 /* BinaryTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374AA4881ECB676C003CCA80 /* BinaryTreeViewController.swift */; };
+		374AA48B1ECCD39E003CCA80 /* NonScrollBinaryTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374AA48A1ECCD39E003CCA80 /* NonScrollBinaryTreeViewController.swift */; };
 		3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9841E96A89000445CDC /* AppDelegate.swift */; };
 		3770F98A1E96A89000445CDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3770F9881E96A89000445CDC /* Main.storyboard */; };
 		3770F98C1E96A89000445CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3770F98B1E96A89000445CDC /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		374A926E1EBBBE52003CCA80 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		374AA4881ECB676C003CCA80 /* BinaryTreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTreeViewController.swift; sourceTree = "<group>"; };
+		374AA48A1ECCD39E003CCA80 /* NonScrollBinaryTreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonScrollBinaryTreeViewController.swift; sourceTree = "<group>"; };
 		3770F9811E96A89000445CDC /* InfiniteScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3770F9841E96A89000445CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3770F9891E96A89000445CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */,
 				374A926E1EBBBE52003CCA80 /* UserDefaults.swift */,
 				374AA4881ECB676C003CCA80 /* BinaryTreeViewController.swift */,
+				374AA48A1ECCD39E003CCA80 /* NonScrollBinaryTreeViewController.swift */,
 			);
 			path = InfiniteScrolling;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374AA48B1ECCD39E003CCA80 /* NonScrollBinaryTreeViewController.swift in Sources */,
 				3790B33E1EAA5A9500F94A5F /* ScrollView.swift in Sources */,
 				3770F9971E96A8FD00445CDC /* Model.swift in Sources */,
 				374A926D1EBBBC42003CCA80 /* UserPageViewController.swift in Sources */,

@@ -77,7 +77,7 @@ class ScrollView: UIViewController, UIGestureRecognizerDelegate, UIScrollViewDel
       let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(switchScreens))
       swipeLeft.direction = .left
       swipeLeft.delegate = self
-      //self.view.addGestureRecognizer(swipeLeft)
+      self.view.addGestureRecognizer(swipeLeft)
    }
    
    
