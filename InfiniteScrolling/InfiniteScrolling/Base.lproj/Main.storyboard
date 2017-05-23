@@ -130,9 +130,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Um1-WU-zaA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wq-DU-gd1" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wq-DU-gd1" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
                                         <subviews>
                                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="o5g-Hj-Bwy">
                                                 <rect key="frame" x="141" y="560" width="92" height="37"/>
@@ -143,12 +142,22 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.39725923373423205" green="0.88400390625000003" blue="0.072354193621109467" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="2wq-DU-gd1" firstAttribute="leading" secondItem="Um1-WU-zaA" secondAttribute="leading" id="6z3-Ox-LRT"/>
+                                    <constraint firstItem="2wq-DU-gd1" firstAttribute="top" secondItem="Um1-WU-zaA" secondAttribute="top" id="Oep-sS-WQo"/>
+                                    <constraint firstAttribute="bottom" secondItem="2wq-DU-gd1" secondAttribute="bottom" id="Zbo-vk-ocb"/>
+                                    <constraint firstAttribute="trailing" secondItem="2wq-DU-gd1" secondAttribute="trailing" id="oFS-qW-ikl"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.91796875" green="0.88923056199999995" blue="0.054236374330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="C7J-zp-Ldg" firstAttribute="top" secondItem="Um1-WU-zaA" secondAttribute="bottom" id="5jL-7o-BLT"/>
+                            <constraint firstAttribute="trailing" secondItem="Um1-WU-zaA" secondAttribute="trailing" id="KXp-84-bOg"/>
                             <constraint firstItem="Um1-WU-zaA" firstAttribute="leading" secondItem="KDj-J3-nbK" secondAttribute="leading" id="aR0-tj-khw"/>
+                            <constraint firstItem="C7J-zp-Ldg" firstAttribute="top" secondItem="Um1-WU-zaA" secondAttribute="bottom" id="bTS-NZ-NGO"/>
+                            <constraint firstItem="Um1-WU-zaA" firstAttribute="top" secondItem="KDj-J3-nbK" secondAttribute="top" id="cDa-Pl-sEB"/>
+                            <constraint firstItem="Um1-WU-zaA" firstAttribute="leading" secondItem="KDj-J3-nbK" secondAttribute="leading" id="gU4-yM-LAX"/>
                             <constraint firstItem="Um1-WU-zaA" firstAttribute="top" secondItem="KDj-J3-nbK" secondAttribute="top" id="hOw-vZ-9QV"/>
                             <constraint firstAttribute="trailing" secondItem="Um1-WU-zaA" secondAttribute="trailing" id="yr0-IS-Y5f"/>
                         </constraints>

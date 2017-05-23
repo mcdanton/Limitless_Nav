@@ -39,6 +39,7 @@ class BinaryTree {
          Node(value: 120),
          Node(value: 130),
          ])
+      currentNode = rootNode
    }
    
    
@@ -119,20 +120,22 @@ class BinaryTree {
    
    // This function takes in a direction, 0 - left, 1 - right, and an ID of a Node and will return an array of Nodes from all the children of the current Node based on the direction chosen
    
-   func getArrayOfChildNodes(direction: Int, myCurrentNode: Node) -> [Node]? {
+   func getArrayOfChildNodes(direction: Int, myCurrentNode: Node) -> [Node] {
       
-      var arrayOfChildNodes: [Node]?
+      var arrayOfChildNodes = [Node]()
       switch direction {
       case 0:
          var myNode = myCurrentNode
          while myNode.leftChild != nil {
-            arrayOfChildNodes?.append(myNode.leftChild!)
+            arrayOfChildNodes.append(myNode.leftChild!)
+//            print(myNode.leftChild!.value)
             myNode = myNode.leftChild!
          }
       case 1:
          var myNode = myCurrentNode
          while myNode.rightChild != nil {
-            arrayOfChildNodes?.append(myNode.rightChild!)
+            arrayOfChildNodes.append(myNode.rightChild!)
+//            print(myNode.rightChild!.value)
             myNode = myNode.rightChild!
          }
       default:
@@ -185,7 +188,6 @@ class Node {
    
    
 }
-
 
 
 
