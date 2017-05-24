@@ -41,6 +41,12 @@ class BinaryTreeViewController: UIViewController, UIScrollViewDelegate {
       scrollView.isDirectionalLockEnabled = true
       scrollView.translatesAutoresizingMaskIntoConstraints = false
       
+      self.automaticallyAdjustsScrollViewInsets = false;
+//      scrollView.contentInset = UIEdgeInsets.zero
+//      scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+//      scrollView.contentOffset = CGPoint(x: 0, y: 0)
+      
+      
       firstLoad()
       
    }
@@ -113,11 +119,14 @@ class BinaryTreeViewController: UIViewController, UIScrollViewDelegate {
       
       guard let rootNode = BinaryTree.sharedInstance.rootNode else {return}
       
+      print("Current Node is: \(BinaryTree.sharedInstance.currentNode?.value)")
+      
       let rightChildNodes = BinaryTree.sharedInstance.getArrayOfChildNodes(direction: 1, myCurrentNode: rootNode)
       let leftChildNodes = BinaryTree.sharedInstance.getArrayOfChildNodes(direction: 0, myCurrentNode: rootNode)
       
       scrollView.contentSize = CGSize(width: view.frame.width + view.frame.width * CGFloat(rightChildNodes.count), height: view.frame.height + view.frame.height * CGFloat(leftChildNodes.count))
       
+      scrollView.bringSubview(toFront: contentView)
       
       for node in 1...rightChildNodes.count {
          let newView = UIView(frame: CGRect(x: view.frame.width * CGFloat(node), y: 0, width: view.frame.width, height: view.frame.height))
@@ -151,6 +160,9 @@ class BinaryTreeViewController: UIViewController, UIScrollViewDelegate {
       switch directionSwiped {
       case .left, .right:
          
+         print("left child node count is \(leftChildNodes.count)")
+         print("right child node count is \(rightChildNodes.count)")
+         
          scrollView.contentSize.height = view.frame.height + view.frame.height * CGFloat(leftChildNodes.count)
          
          
@@ -172,6 +184,9 @@ class BinaryTreeViewController: UIViewController, UIScrollViewDelegate {
          }
          
       case .up, .down:
+         
+         print("left child node count is \(leftChildNodes.count)")
+         print("right child node count is \(rightChildNodes.count)")
          
          scrollView.contentSize.width = view.frame.width + view.frame.width * CGFloat(rightChildNodes.count)
          
