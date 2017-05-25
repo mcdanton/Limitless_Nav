@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Analytics
 
 class BinarySearchTree<T: Comparable> {
    
@@ -21,12 +20,7 @@ class BinarySearchTree<T: Comparable> {
    // MARK: Init
    public init(value: T) {
       self.value = value
-      
-      let analytics = SEGAnalytics()
-      analytics.track("New Node Created")
-      print(analytics.debugDescription)
-
-   }
+      }
    
    // Init to create full tree
    public convenience init(array: [T]) {

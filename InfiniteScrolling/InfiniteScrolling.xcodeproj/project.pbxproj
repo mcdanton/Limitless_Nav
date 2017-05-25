@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F026387A6D4FB826FD28948 /* Pods_InfiniteScrolling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EEC3AC68EED8880B07353F /* Pods_InfiniteScrolling.framework */; };
 		3723D2C41E9FCE9C00FDD397 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3723D2C31E9FCE9C00FDD397 /* Data.swift */; };
 		374A92691EBA73C0003CCA80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A92681EBA73C0003CCA80 /* LoginViewController.swift */; };
 		374A926B1EBB81DF003CCA80 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A926A1EBB81DF003CCA80 /* REST.swift */; };
@@ -107,7 +106,6 @@
 		374AA4471EC24C7D003CCA80 /* libiPhone-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 374AA43F1EC24C7D003CCA80 /* libiPhone-lib.a */; };
 		374AA4481EC24C7D003CCA80 /* RegisterFeatures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 374AA4401EC24C7D003CCA80 /* RegisterFeatures.cpp */; };
 		374AA4491EC24C7D003CCA80 /* RegisterMonoModules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 374AA4421EC24C7D003CCA80 /* RegisterMonoModules.cpp */; };
-		374AA44E1EC24FFD003CCA80 /* UnityUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 374AA44D1EC24FFD003CCA80 /* UnityUtils.mm */; };
 		374AA4501EC2508A003CCA80 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374AA44F1EC2508A003CCA80 /* main.swift */; };
 		374AA4561EC36ABD003CCA80 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 374AA4551EC36ABD003CCA80 /* Data */; };
 		374AA4581EC36D2A003CCA80 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374AA4571EC36D2A003CCA80 /* CoreText.framework */; };
@@ -130,6 +128,9 @@
 		374AA47A1EC36E6B003CCA80 /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 374AA4791EC36E6B003CCA80 /* libiconv.2.tbd */; };
 		374AA47E1EC36E8B003CCA80 /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374AA47D1EC36E8B003CCA80 /* MediaToolbox.framework */; };
 		374AA4841EC37312003CCA80 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374AA4831EC37312003CCA80 /* ReplayKit.framework */; };
+		374AA48E1ED61941003CCA80 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374AA4811EC36F3D003CCA80 /* CoreAudioKit.framework */; };
+		374AA48F1ED61946003CCA80 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374AA47F1EC36F38003CCA80 /* CoreAudio.framework */; };
+		374AA4951ED61C9E003CCA80 /* UnityUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 374AA4941ED61C9E003CCA80 /* UnityUtils.mm */; };
 		3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9841E96A89000445CDC /* AppDelegate.swift */; };
 		3770F98A1E96A89000445CDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3770F9881E96A89000445CDC /* Main.storyboard */; };
 		3770F98C1E96A89000445CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3770F98B1E96A89000445CDC /* Assets.xcassets */; };
@@ -139,10 +140,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		16EEC3AC68EED8880B07353F /* Pods_InfiniteScrolling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfiniteScrolling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18C25174DD87772D9EB14F9C /* Pods-InfiniteScrolling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrolling.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteScrolling/Pods-InfiniteScrolling.release.xcconfig"; sourceTree = "<group>"; };
 		3723D2C31E9FCE9C00FDD397 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		3723D2C61EA0075B00FDD397 /* InfiniteScrolling-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfiniteScrolling-Bridging-Header.h"; sourceTree = "<group>"; };
 		374A92681EBA73C0003CCA80 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		374A926A1EBB81DF003CCA80 /* REST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		374A926C1EBBBC42003CCA80 /* UserPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
@@ -289,8 +287,6 @@
 		374AA4411EC24C7D003CCA80 /* RegisterFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFeatures.h; sourceTree = "<group>"; };
 		374AA4421EC24C7D003CCA80 /* RegisterMonoModules.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterMonoModules.cpp; sourceTree = "<group>"; };
 		374AA4431EC24C7D003CCA80 /* RegisterMonoModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterMonoModules.h; sourceTree = "<group>"; };
-		374AA44C1EC24FFD003CCA80 /* UnityUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityUtils.h; sourceTree = "<group>"; };
-		374AA44D1EC24FFD003CCA80 /* UnityUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityUtils.mm; sourceTree = "<group>"; };
 		374AA44F1EC2508A003CCA80 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		374AA4551EC36ABD003CCA80 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../../../UnityProjects/UnitySceneInfinite/Data; sourceTree = "<group>"; };
 		374AA4571EC36D2A003CCA80 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -316,7 +312,9 @@
 		374AA4811EC36F3D003CCA80 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		374AA4831EC37312003CCA80 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		374AA4861EC38284003CCA80 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		374AA4871EC3A72A003CCA80 /* UnityBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityBridge.h; sourceTree = "<group>"; };
+		374AA4921ED61C9E003CCA80 /* UnityBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnityBridge.h; path = objc/UnityBridge.h; sourceTree = "<group>"; };
+		374AA4931ED61C9E003CCA80 /* UnityUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityUtils.h; sourceTree = "<group>"; };
+		374AA4941ED61C9E003CCA80 /* UnityUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityUtils.mm; sourceTree = "<group>"; };
 		3770F9811E96A89000445CDC /* InfiniteScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3770F9841E96A89000445CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3770F9891E96A89000445CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -325,7 +323,6 @@
 		3770F9901E96A89000445CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3770F9961E96A8FD00445CDC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3790B33D1EAA5A9500F94A5F /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
-		50042EF1AF8B291B74C89E91 /* Pods-InfiniteScrolling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrolling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteScrolling/Pods-InfiniteScrolling.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				374AA4841EC37312003CCA80 /* ReplayKit.framework in Frameworks */,
+				374AA46E1EC36D83003CCA80 /* MediaPlayer.framework in Frameworks */,
+				374AA48F1ED61946003CCA80 /* CoreAudio.framework in Frameworks */,
+				374AA48E1ED61941003CCA80 /* CoreAudioKit.framework in Frameworks */,
 				374AA47E1EC36E8B003CCA80 /* MediaToolbox.framework in Frameworks */,
 				374AA47A1EC36E6B003CCA80 /* libiconv.2.tbd in Frameworks */,
 				374AA4781EC36E56003CCA80 /* UIKit.framework in Frameworks */,
@@ -341,7 +341,6 @@
 				374AA4741EC36E48003CCA80 /* QuartzCore.framework in Frameworks */,
 				374AA4721EC36D91003CCA80 /* OpenGLES.framework in Frameworks */,
 				374AA4701EC36D8B003CCA80 /* OpenAL.framework in Frameworks */,
-				374AA46E1EC36D83003CCA80 /* MediaPlayer.framework in Frameworks */,
 				374AA46C1EC36D7C003CCA80 /* iAd.framework in Frameworks */,
 				374AA46A1EC36D72003CCA80 /* Foundation.framework in Frameworks */,
 				374AA4681EC36D6C003CCA80 /* CoreVideo.framework in Frameworks */,
@@ -354,7 +353,6 @@
 				374AA45A1EC36D32003CCA80 /* AudioToolbox.framework in Frameworks */,
 				374AA4581EC36D2A003CCA80 /* CoreText.framework in Frameworks */,
 				374AA4471EC24C7D003CCA80 /* libiPhone-lib.a in Frameworks */,
-				2F026387A6D4FB826FD28948 /* Pods_InfiniteScrolling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +384,6 @@
 				374AA45B1EC36D3B003CCA80 /* AVFoundation.framework */,
 				374AA4591EC36D32003CCA80 /* AudioToolbox.framework */,
 				374AA4571EC36D2A003CCA80 /* CoreText.framework */,
-				16EEC3AC68EED8880B07353F /* Pods_InfiniteScrolling.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -618,11 +615,11 @@
 			path = ../../../UnityProjects/UnitySceneInfinite/Libraries;
 			sourceTree = "<group>";
 		};
-		374AA44A1EC24FFD003CCA80 /* objc */ = {
+		374AA4911ED61C9E003CCA80 /* objc */ = {
 			isa = PBXGroup;
 			children = (
-				374AA44C1EC24FFD003CCA80 /* UnityUtils.h */,
-				374AA44D1EC24FFD003CCA80 /* UnityUtils.mm */,
+				374AA4931ED61C9E003CCA80 /* UnityUtils.h */,
+				374AA4941ED61C9E003CCA80 /* UnityUtils.mm */,
 			);
 			path = objc;
 			sourceTree = "<group>";
@@ -633,7 +630,6 @@
 				374A92721EC21C9F003CCA80 /* Unity.xcconfig */,
 				3770F9831E96A89000445CDC /* InfiniteScrolling */,
 				3770F9821E96A89000445CDC /* Products */,
-				C3F621EBEA1DA43EF2E619BE /* Pods */,
 				08E8E70FBF389B2E5882973E /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -649,15 +645,14 @@
 		3770F9831E96A89000445CDC /* InfiniteScrolling */ = {
 			isa = PBXGroup;
 			children = (
-				374AA4871EC3A72A003CCA80 /* UnityBridge.h */,
-				374AA44A1EC24FFD003CCA80 /* objc */,
+				374AA4921ED61C9E003CCA80 /* UnityBridge.h */,
+				374AA4911ED61C9E003CCA80 /* objc */,
 				374A9B841EC24C53003CCA80 /* Unity */,
 				374A92711EC2150B003CCA80 /* Models */,
 				374A92701EC214EE003CCA80 /* View Controllers */,
 				374A926E1EBBBE52003CCA80 /* UserDefaults.swift */,
 				3770F9841E96A89000445CDC /* AppDelegate.swift */,
 				3770F9881E96A89000445CDC /* Main.storyboard */,
-				3723D2C61EA0075B00FDD397 /* InfiniteScrolling-Bridging-Header.h */,
 				3770F98B1E96A89000445CDC /* Assets.xcassets */,
 				3770F98D1E96A89000445CDC /* LaunchScreen.storyboard */,
 				3770F9901E96A89000445CDC /* Info.plist */,
@@ -667,15 +662,6 @@
 			path = InfiniteScrolling;
 			sourceTree = "<group>";
 		};
-		C3F621EBEA1DA43EF2E619BE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				50042EF1AF8B291B74C89E91 /* Pods-InfiniteScrolling.debug.xcconfig */,
-				18C25174DD87772D9EB14F9C /* Pods-InfiniteScrolling.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -683,12 +669,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3770F9931E96A89000445CDC /* Build configuration list for PBXNativeTarget "InfiniteScrolling" */;
 			buildPhases = (
-				550A35363C3A5B1FCD60BC5F /* [CP] Check Pods Manifest.lock */,
 				3770F97D1E96A89000445CDC /* Sources */,
 				3770F97E1E96A89000445CDC /* Frameworks */,
 				3770F97F1E96A89000445CDC /* Resources */,
-				6F2BD02659943523ED730C86 /* [CP] Embed Pods Frameworks */,
-				E80AD84AEDAFF63731A6CBFC /* [CP] Copy Pods Resources */,
 				374A92741EC23E97003CCA80 /* ShellScript */,
 			);
 			buildRules = (
@@ -764,51 +747,6 @@
 			shellPath = /bin/sh;
 			shellScript = "rm -rf \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Data\";\ncp -Rf \"$UNITY_IOS_EXPORT_PATH/Data\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Data\";";
 		};
-		550A35363C3A5B1FCD60BC5F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6F2BD02659943523ED730C86 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InfiniteScrolling/Pods-InfiniteScrolling-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E80AD84AEDAFF63731A6CBFC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InfiniteScrolling/Pods-InfiniteScrolling-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -880,8 +818,8 @@
 				374AA2581EC24C70003CCA80 /* ObjCRuntime.mm in Sources */,
 				374AA22D1EC24C6F003CCA80 /* Il2CppCompilerCalculateTypeValues_7Table.cpp in Sources */,
 				374AA24A1EC24C70003CCA80 /* UnityViewControllerBaseiOS.mm in Sources */,
-				374AA44E1EC24FFD003CCA80 /* UnityUtils.mm in Sources */,
 				374AA23E1EC24C70003CCA80 /* UnityICallRegistration.cpp in Sources */,
+				374AA4951ED61C9E003CCA80 /* UnityUtils.mm in Sources */,
 				374AA23F1EC24C70003CCA80 /* UnresolvedVirtualCallStubs.cpp in Sources */,
 				374AA2541EC24C70003CCA80 /* FullScreenVideoPlayer.mm in Sources */,
 				374AA2171EC24C6F003CCA80 /* Bulk_mscorlib_5.cpp in Sources */,
@@ -945,7 +883,6 @@
 /* Begin XCBuildConfiguration section */
 		3770F9911E96A89000445CDC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50042EF1AF8B291B74C89E91 /* Pods-InfiniteScrolling.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -984,7 +921,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -995,7 +932,6 @@
 		};
 		3770F9921E96A89000445CDC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18C25174DD87772D9EB14F9C /* Pods-InfiniteScrolling.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1028,7 +964,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1041,10 +977,12 @@
 			baseConfigurationReference = 374A92721EC21C9F003CCA80 /* Unity.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				DEVELOPMENT_TEAM = R92756Z4HH;
 				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_PREFIX_HEADER = ./InfiniteScrolling/PrefixHeader.pch;
 				INFOPLIST_FILE = InfiniteScrolling/Info.plist;
@@ -1073,10 +1011,12 @@
 			baseConfigurationReference = 374A92721EC21C9F003CCA80 /* Unity.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				DEVELOPMENT_TEAM = R92756Z4HH;
 				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_PREFIX_HEADER = ./InfiniteScrolling/PrefixHeader.pch;
 				INFOPLIST_FILE = InfiniteScrolling/Info.plist;

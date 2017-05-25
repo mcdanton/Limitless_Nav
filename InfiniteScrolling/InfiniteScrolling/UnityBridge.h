@@ -1,13 +1,32 @@
 //
 //  UnityBridge.h
-//  InfiniteScrolling
 //
-//  Created by Dan Hefter on 5/10/17.
-//  Copyright © 2017 DH. All rights reserved.
+//  Created by Adam Venturella on 10/28/15.
 //
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 #ifndef UnityBridge_h
 #define UnityBridge_h
 
-
+#import "UnityUtils.h"
+#import "UnityAppController.h"
+#import "Unity/UnityInterface.h"
 #endif /* UnityBridge_h */
+
+
+
+/**
+ * Replacement Function for UnityAppController.h
+ *
+ */
+/*
+ NS_INLINE UnityAppController* GetAppController(){
+ 
+ NSObject<UIApplicationDelegate>* delegate = [UIApplication sharedApplication].delegate;
+ UnityAppController* currentUnityController = (UnityAppController *)[delegate valueForKey:@"currentUnityController"];
+ return currentUnityController;
+ }
+ */

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Analytics
+
 
 
 class Node<T> {
@@ -19,11 +19,7 @@ class Node<T> {
    init(value: T) {
       self.value = value
       
-//      let sharedAnalytics = SEGAnalytics()
-//      
-//      sharedAnalytics.track("This is tracking")
-//      
-//      print(sharedAnalytics.debugDescription)
+
 
    }
    

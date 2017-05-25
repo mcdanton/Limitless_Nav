@@ -22,16 +22,17 @@ void UnityInitTrampoline();
 
 
 extern "C" void custom_unity_init(int argc, char* argv[]){
-    UnityInitTrampoline();
+   UnityInitTrampoline();
    UnityInitRuntime(argc, argv);
-
-    RegisterMonoModules();
-    NSLog(@"-> registered mono modules %p\n", &constsection);
-    RegisterFeatures();
-
-    // iOS terminates open sockets when an application enters background mode.
-    // The next write to any of such socket causes SIGPIPE signal being raised,
-    // even if the request has been done from scripting side. This disables the
-    // signal and allows Mono to throw a proper C# exception.
-    std::signal(SIGPIPE, SIG_IGN);
+   
+   
+   RegisterMonoModules();
+   NSLog(@"-> registered mono modules %p\n", &constsection);
+   RegisterFeatures();
+   
+   // iOS terminates open sockets when an application enters background mode.
+   // The next write to any of such socket causes SIGPIPE signal being raised,
+   // even if the request has been done from scripting side. This disables the
+   // signal and allows Mono to throw a proper C# exception.
+   std::signal(SIGPIPE, SIG_IGN);
 }
