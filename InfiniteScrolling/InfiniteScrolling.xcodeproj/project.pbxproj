@@ -21,6 +21,7 @@
 		3770F98F1E96A89000445CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3770F98D1E96A89000445CDC /* LaunchScreen.storyboard */; };
 		3770F9971E96A8FD00445CDC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3770F9961E96A8FD00445CDC /* Model.swift */; };
 		3790B33E1EAA5A9500F94A5F /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3790B33D1EAA5A9500F94A5F /* ScrollView.swift */; };
+		37CE64291EDDF41F00C5329E /* ProgrammaticScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE64281EDDF41F00C5329E /* ProgrammaticScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3770F9901E96A89000445CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3770F9961E96A8FD00445CDC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3790B33D1EAA5A9500F94A5F /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		37CE64281EDDF41F00C5329E /* ProgrammaticScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammaticScrollView.swift; sourceTree = "<group>"; };
 		50042EF1AF8B291B74C89E91 /* Pods-InfiniteScrolling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrolling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteScrolling/Pods-InfiniteScrolling.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				374A926E1EBBBE52003CCA80 /* UserDefaults.swift */,
 				374AA4881ECB676C003CCA80 /* BinaryTreeViewController.swift */,
 				374AA48A1ECCD39E003CCA80 /* NonScrollBinaryTreeViewController.swift */,
+				37CE64281EDDF41F00C5329E /* ProgrammaticScrollView.swift */,
 			);
 			path = InfiniteScrolling;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				374AA4891ECB676C003CCA80 /* BinaryTreeViewController.swift in Sources */,
 				3770F9851E96A89000445CDC /* AppDelegate.swift in Sources */,
 				3723D2C41E9FCE9C00FDD397 /* Data.swift in Sources */,
+				37CE64291EDDF41F00C5329E /* ProgrammaticScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
