@@ -10,9 +10,13 @@ import Foundation
 import Analytics
 
 
+
 class BinaryTree {
    
    static let sharedInstance = BinaryTree()
+   
+   let width = 128
+   
    
    var rootNode: Node?
    var currentNode: Node?
@@ -25,21 +29,7 @@ class BinaryTree {
    }
    
    
-    init () {
-//      createTree(nodesInTree: [
-//         Node(value: 100),
-//         Node(value: 140),
-//         Node(value: 80),
-//         Node(value: 110),
-//         Node(value: 70),
-//         Node(value: 190),
-//         Node(value: 40),
-//         Node(value: 50),
-//         Node(value: 10),
-//         Node(value: 120),
-//         Node(value: 130),
-//         ])
-      
+   init () {
       createTree(nodesInTree: [
          Node(value: 100),
          Node(value: 150),
@@ -103,7 +93,7 @@ class BinaryTree {
    }
    
    func screenWasSwiped(theCurrentNode: Node?, swipeGesture: UISwipeGestureRecognizer, navController: UINavigationController?) {
-
+      
       
       switch swipeGesture.direction {
       case UISwipeGestureRecognizerDirection.down:
@@ -151,13 +141,10 @@ class BinaryTree {
       default:
          break
       }
-      
-      print("current Node is: \(currentNode?.value)")
-      print("rightChild Node is: \(currentNode?.rightChild?.value)")
-      print("leftChild Node is: \(currentNode?.leftChild?.value)")
-      
-      
    }
+   
+   
+   
    
    
    // This function takes in a direction, 0 - left, 1 - right, and an ID of a Node and will return an array of Nodes from all the children of the current Node based on the direction chosen
@@ -170,14 +157,14 @@ class BinaryTree {
          var myNode = myCurrentNode
          while myNode.leftChild != nil {
             arrayOfChildNodes.append(myNode.leftChild!)
-//            print(myNode.leftChild!.value)
+            //            print(myNode.leftChild!.value)
             myNode = myNode.leftChild!
          }
       case 1:
          var myNode = myCurrentNode
          while myNode.rightChild != nil {
             arrayOfChildNodes.append(myNode.rightChild!)
-//            print(myNode.rightChild!.value)
+            //            print(myNode.rightChild!.value)
             myNode = myNode.rightChild!
          }
       default:
@@ -187,9 +174,84 @@ class BinaryTree {
    }
    
    
+
+   
+   func returnDepth() ->  Int  {
+      return 5
+   }
+   
+   func printIndent(indent: Int) {
+      
+      if(indent == 0) {
+         return
+      }
+      
+      var spaceToPrint = "_"
+      
+      for i in 1..<indent {
+         spaceToPrint += "_"
+      }
+      print(spaceToPrint,terminator:"")
+      
+
+   }
+
+   
+   func DebugTree(node: [Node], depth : Int) {
+      
+      var blankarray = true;
+      
+      for n in node {
+         if(n.value > 0) {
+            blankarray = false;
+         }
+      }
+      
+      if(blankarray) {
+         return
+      }
+      
+      
+      let spacing = (Int)(width / (node.count * 2))
+      
+      var children = [Node]()
+      
+      for (index, n) in node.enumerated() {
+         
+         if( index == 0) {
+            n.printNode(indent: spacing)
+         } else {
+            n.printNode(indent: (spacing * 2))
+         }
+         
+         print("", terminator : "")
+         // last item
+         if(index == node.count - 1) {
+            print("-")
+         }
+         
+         // create the next array
+         if (n.leftChild != nil) {
+            children.append(n.leftChild!)
+         } else {
+            children.append(Node(value: -1));
+         }
+         if (n.rightChild != nil) {
+            children.append(n.rightChild!)
+         } else {
+            children.append(Node(value: -1));
+         }
+         
+      
+      }
+      
+      DebugTree(node:children, depth: depth + 1);
+      
+   }
+   
+
+   
 }
-
-
 
 
 class Node {
@@ -228,58 +290,21 @@ class Node {
    }
    
    
+   func printNode(indent: Int?) {
+      
+      var spaceToPrint = ""
+      
+      let spacinglength = indent! - self.value.description.characters.count
+
+      if indent != nil {
+         for i in 0..<spacinglength {
+            spaceToPrint += "_"
+         }
+         print("\(spaceToPrint)\(self.value)",terminator:"")
+      }
+   }
+   
    
 }
-
-
-
-
-
-/*
- extension Node: CustomStringConvertible {
- 
- var description: String {
- var text = "\(value)"
- 
- if !children.isEmpty {
- text += " {" + children.map { $0.description }.joined(separator: ", ") + "} "
- 
- //            text += " {"
- //            for child in children {
- //               text += child.description + ", "
- //            }
- //            text += "} "
- //         }
- }
- return text
- }
- }
- 
- 
- extension Node where T: Equatable {
- // 1
- func search(value: T) -> Node? {
- // 2
- if value == self.value {
- return self
- }
- // 3
- for child in children {
- if let found = child.search(value: value) {
- return found
- }
- }
- // 4
- return nil
- }
- }
- */
-
-
-
-
-
-
-
 
 

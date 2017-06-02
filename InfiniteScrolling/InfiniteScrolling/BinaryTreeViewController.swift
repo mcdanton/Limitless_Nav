@@ -34,6 +34,10 @@ class BinaryTreeViewController: UIViewController, UIScrollViewDelegate {
    override func viewDidLoad() {
       super.viewDidLoad()
       
+      guard let rootNode = BinaryTree.sharedInstance.rootNode else {return}
+      BinaryTree.sharedInstance.DebugTree(node: [rootNode],depth: 1)
+      
+      
       navigationController?.isNavigationBarHidden = true
       scrollView.delegate = self
       scrollView.isPagingEnabled = true
@@ -183,38 +187,14 @@ class BinaryTreeViewController: UIViewController, UIScrollViewDelegate {
          scrollView.contentSize.height = view.frame.height + view.frame.height * CGFloat(leftChildNodes.count)
          
          
-         if leftChildNodes.count > 0 {
-            for node in 1...leftChildNodes.count {
-               let newView = UIView(frame: CGRect(x: 0, y: view.frame.height * CGFloat(node), width: view.frame.width, height: view.frame.height))
-               newView.backgroundColor = UIColor.random()
-               
-               let label = UILabel(frame: CGRect(x: 16, y: self.view.frame.midY, width: self.view.frame.width, height: 24))
-               let nodeValue = String(leftChildNodes[node - 1].value)
-               print(nodeValue)
-               label.text = nodeValue
-               newView.addSubview(label)
-               contentView.addSubview(newView)
-            }
-         }
+         moveLeft(currentNode: currentNode)
   
       case .up, .down:
          
          scrollView.contentSize.width = view.frame.width + view.frame.width * CGFloat(rightChildNodes.count)
          
 
-         if rightChildNodes.count > 0 {
-            for node in 1...rightChildNodes.count {
-               
-               let newView = UIView(frame: CGRect(x: view.frame.width * CGFloat(node), y: 0, width: view.frame.width, height: view.frame.height))
-               newView.backgroundColor = UIColor.random()
-               let label = UILabel(frame: CGRect(x: 16, y: self.view.frame.midY, width: self.view.frame.width, height: 24))
-               let nodeValue = String(rightChildNodes[node - 1].value)
-               print(nodeValue)
-               label.text = nodeValue
-               newView.addSubview(label)
-               contentView.addSubview(newView)
-            }
-         }
+         moveUp(currentNode: currentNode)
          
       default:
          break
@@ -326,21 +306,47 @@ class BinaryTreeViewController: UIViewController, UIScrollViewDelegate {
             contentView.addSubview(newView)
          }
 
-//         scrollView.contentOffset.x = 750
          
          return nodeArray
-         
-         
-         
-         
-         
-         
          
       } else {
          return moveUp(currentNode: parent)
       }
    }
    
+   
+   func moveLeft(currentNode: Node) -> [Node] {
+      
+      var nodeArray = [Node]()
+      guard let parent = currentNode.parent else {return nodeArray}
+      
+      if parent.leftChild!.value != currentNode.value {
+         let leftChildNodes = BinaryTree.sharedInstance.getArrayOfChildNodes(direction: 0, myCurrentNode: currentNode)
+         nodeArray.append(currentNode)
+         nodeArray.append(contentsOf: leftChildNodes)
+         
+         scrollView.contentSize.height = view.frame.height * CGFloat(nodeArray.count)
+         
+         for node in 0..<nodeArray.count {
+            
+            let newView = UIView(frame: CGRect(x: 0, y: view.frame.height * CGFloat(node), width: view.frame.width, height: view.frame.height))
+            newView.backgroundColor = UIColor.random()
+            let label = UILabel(frame: CGRect(x: 16, y: self.view.frame.midY, width: self.view.frame.width, height: 24))
+            let nodeValue = String(nodeArray[node].value)
+            print(nodeValue)
+            label.text = nodeValue
+            newView.addSubview(label)
+            contentView.addSubview(newView)
+         }
+         
+         
+         return nodeArray
+         
+      } else {
+         return moveLeft(currentNode: parent)
+      }
+   }
+
    
    
    
